@@ -1,10 +1,8 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function Home() {
   return (
-    <Layout>
-      <h1>Hi, I'm Riccardo</h1>
+    <Layout h1="Hi, I'm Riccardo">
       <p>
         I'm a frontend developer working in Venice, Italy. I specialize in
         building fast and enjoyable web experiences, using modern technologies

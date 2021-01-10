@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {

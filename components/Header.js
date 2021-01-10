@@ -1,26 +1,17 @@
-import Head from 'next/head';
-import Link from './ActiveLink';
+import Link from './NavLink';
 
 export default function Header({ className, title }) {
   return (
     <>
-      <Head>
-        <title>Riccardo Zaffalon{title && ` | ${title}`}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header className={className}>
+      <header className={`${className} pt-8`}>
         <nav>
           <ul>
             <li>
-              <Link href="/about">
-                <a className="font-semibold text-indigo-500">About</a>
+              <Link href="/" isFirst>
+                Home
               </Link>
-              <Link href="/skills">
-                <a className="font-semibold text-indigo-500">Skills</a>
-              </Link>
-              <Link href="/">
-                <a className="font-semibold text-indigo-500">Home</a>
-              </Link>
+              <Link href="/about">About</Link>
+              <Link href="/skills">Skills</Link>
             </li>
           </ul>
         </nav>

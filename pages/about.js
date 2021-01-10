@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 export default function Home() {
   return (
     <Layout title="About">
-      <h1>About</h1>
       <p>
         Previously, I have lived in beautiful{' '}
         <strong>Vancouver, British Columbia</strong>, and worked as a freelancer

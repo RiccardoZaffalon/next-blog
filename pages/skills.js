@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 export default function Home() {
   return (
     <Layout title="Skills">
-      <h1>Skills</h1>
       <p>
         I am proficient in <u>HTML</u>, <u>CSS</u>, and their most popular
         preprocessors (
@@ -16,6 +15,14 @@ export default function Home() {
         </em>
         ), <u>Salesforce Commerce Cloud</u> (
         <em>Certified B2C Commerce Developer</em>), and <u>git</u>.
+      </p>
+      <p>
+        I am experienced in <u>React</u>, <u>webpack</u>, and <u>Gulp</u>, as
+        well as design tools such as <u>Figma</u> and <u>Sketch</u>.
+      </p>
+      <p>
+        Currently my focus is on the <u>React</u> ecosystem, <u>Next.js</u>, and{' '}
+        <u>Tailwind CSS</u>.
       </p>
     </Layout>
   );
