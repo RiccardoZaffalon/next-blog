@@ -1,9 +1,10 @@
 import Link from './NavLink';
+import DarkMode from './DarkMode';
 
-export default function Header({ className, title }) {
+export default function Header({ className }) {
   return (
     <>
-      <header className={`${className} pt-8`}>
+      <header className={`${className} pt-8 flex justify-between`}>
         <nav>
           <ul>
             <li>
@@ -15,6 +16,7 @@ export default function Header({ className, title }) {
             </li>
           </ul>
         </nav>
+        <DarkMode />
       </header>
     </>
   );

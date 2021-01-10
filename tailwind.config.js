@@ -1,12 +1,12 @@
 /* eslint-disable global-require */
+// const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
+  darkMode: 'class', // or 'media' or 'class'
+  theme: {},
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [],
 };
