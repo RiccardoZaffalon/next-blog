@@ -1,14 +1,8 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function Home() {
   return (
-    <Layout>
-      <Head>
-        <title>Riccardo Zaffalon | About</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout title="About">
       <h1>About</h1>
       <p>
         Previously, I have lived in beautiful{' '}

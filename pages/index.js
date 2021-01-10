@@ -4,11 +4,6 @@ import Layout from '../components/Layout';
 export default function Home() {
   return (
     <Layout>
-      <Head>
-        <title>Riccardo Zaffalon</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <h1>Hi, I'm Riccardo</h1>
       <p>
         I'm a frontend developer working in Venice, Italy. I specialize in
