@@ -1,6 +1,8 @@
+import { getAllPosts } from '../lib/api';
 import Layout from '../layouts/Layout';
+import LatestArticles from '../components/LatestArticles';
 
-export default function Home() {
+export default function Home({ articles }) {
   return (
     <Layout h1="Hi, I'm Riccardo">
       <p>
@@ -8,6 +10,8 @@ export default function Home() {
         building fast and enjoyable web experiences, using modern technologies
         and user-centered design.
       </p>
+
+      <LatestArticles articles={articles} />
 
       <p>
         I am currently at{' '}
@@ -43,4 +47,19 @@ export default function Home() {
       </p>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const posts = getAllPosts(['slug', 'title']);
+
+  console.log(posts);
+
+  return {
+    props: {
+      articles: posts.map((post) => ({
+        slug: post.slug,
+        title: post.title,
+      })),
+    },
+  };
 }

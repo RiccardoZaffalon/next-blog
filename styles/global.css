@@ -19,7 +19,7 @@
         @apply text-gray-600 dark:text-gray-300 tracking-wide;
     }
 
-    p, figcaption {
+    p, figcaption, .article {
         @apply text-gray-600 dark:text-gray-300;
     }
 }
