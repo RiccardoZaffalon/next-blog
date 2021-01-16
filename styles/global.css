@@ -3,6 +3,34 @@
 @tailwind utilities;
 
 @layer base {
+    @font-face {
+        font-family: Noto;
+        font-style: normal;
+        font-weight: 400;
+        src: url(/fonts/NotoSans-Regular.ttf) format("woff");
+    }
+
+    @font-face {
+        font-family: Noto;
+        font-style: italic;
+        font-weight: 400;
+        src: url(/fonts/NotoSans-Italic.ttf) format("woff");
+    }
+
+    @font-face {
+        font-family: Noto;
+        font-style: normal;
+        font-weight: 700;
+        src: url(/fonts/NotoSans-Bold.ttf) format("woff");
+    }
+
+    @font-face {
+        font-family: Noto;
+        font-style: italic;
+        font-weight: 700;
+        src: url(/fonts/NotoSans-BoldItalic.ttf) format("woff");
+    }
+
     b, strong {
         @apply font-semibold tracking-wide;
     }
@@ -21,5 +49,9 @@
 
     p, figcaption, .article {
         @apply text-gray-600 dark:text-gray-300;
+    }
+
+    .min-w-200 {
+        min-width: 200px
     }
 }

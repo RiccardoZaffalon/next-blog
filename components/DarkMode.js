@@ -11,7 +11,8 @@ export default function DarkMode() {
   return (
     <button
       type="button"
-      aria-label="Toggle Dark Mode"
+      aria-label="Toggle dark mode for the site"
+      title="Toggle dark mode for the site"
       className="bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 rounded p-3"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
@@ -17,9 +17,11 @@
     "next": "10.0.4",
     "next-themes": "0.0.10",
     "postcss": "^8.2.2",
+    "prismjs": "^1.23.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "remark": "^13.0.0",
+    "react-markdown": "^5.0.3",
+    "react-syntax-highlighter": "^15.4.3",
     "remark-html": "^13.0.1",
     "tailwindcss": "^2.0.2"
   }

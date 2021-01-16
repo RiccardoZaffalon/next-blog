@@ -1,20 +1,22 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
+
 import Layout from '../../layouts/Layout';
+import MarkdownToHTML from '../../components/MarkdownToHTML';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
-import markdownToHtml from '../../lib/markdownToHtml';
 
 export default function Post({ post }) {
   const router = useRouter();
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout title={post.title}>
-      <div
-        className="max-w-2xl mx-auto article prose dark:prose-light"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+      <div className="article prose dark:prose-light">
+        <MarkdownToHTML>{post.content}</MarkdownToHTML>
+      </div>
     </Layout>
   );
 }
@@ -29,7 +31,8 @@ export async function getStaticProps({ params }) {
     'ogImage',
     'coverImage',
   ]);
-  const content = await markdownToHtml(post.content || '');
+
+  const { content } = post;
 
   return {
     props: {

@@ -1,14 +1,13 @@
 /* eslint-disable global-require */
-const colors = require('tailwindcss/colors');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        'light-blue': colors.lightBlue,
-        cyan: colors.cyan,
+      fontFamily: {
+        sans: ['Noto', ...fontFamily.sans],
       },
       typography: (theme) => ({
         light: {
