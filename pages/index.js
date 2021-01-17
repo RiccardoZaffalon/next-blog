@@ -11,15 +11,18 @@ export default function Home({ articles }) {
         and user-centered design.
       </p>
 
+      <p>
+        I like sharing what I learn, and to wrap my head around a new concept or
+        tool I sometimes write about it. Here are some of those posts:
+      </p>
+
       <LatestArticles articles={articles} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts(['slug', 'title', 'subtitle']);
-
-  console.log(posts);
+  const posts = getAllPosts(['slug', 'title', 'subtitle', 'tags']);
 
   return {
     props: {
@@ -27,6 +30,7 @@ export async function getStaticProps() {
         slug: post.slug,
         title: post.title || '',
         subtitle: post.subtitle || '',
+        tags: post.tags && post.tags.length ? post.tags : null,
       })),
     },
   };

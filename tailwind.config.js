@@ -1,13 +1,22 @@
 /* eslint-disable global-require */
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily, fontSize } = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
+    colors: {
+      ...colors,
+      red: colors.rose,
+    },
     extend: {
       fontFamily: {
-        sans: ['Noto', ...fontFamily.sans],
+        sans: ['Europa', ...fontFamily.sans],
+      },
+      fontSize: {
+        '2xs': '0.65rem',
+        ...fontSize,
       },
       typography: (theme) => ({
         light: {

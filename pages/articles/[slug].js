@@ -13,10 +13,14 @@ export default function Post({ post }) {
   }
 
   return (
-    <Layout title={post.title}>
-      <div className="article prose dark:prose-light">
+    <Layout
+      title={post.title}
+      tags={post.tags}
+      readingTime={post.readingTime?.text}
+    >
+      <article className="prose dark:prose-light pb-8 md:pb-12">
         <MarkdownToHTML>{post.content}</MarkdownToHTML>
-      </div>
+      </article>
     </Layout>
   );
 }
@@ -28,8 +32,10 @@ export async function getStaticProps({ params }) {
     'slug',
     'author',
     'content',
+    'tags',
     'ogImage',
     'coverImage',
+    'readingTime',
   ]);
 
   const { content } = post;

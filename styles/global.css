@@ -3,32 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: Noto;
-        font-style: normal;
-        font-weight: 400;
-        src: url(/fonts/NotoSans-Regular.ttf) format("woff");
+    html {
+        font-size: 112.5%;
     }
 
-    @font-face {
-        font-family: Noto;
-        font-style: italic;
-        font-weight: 400;
-        src: url(/fonts/NotoSans-Italic.ttf) format("woff");
-    }
-
-    @font-face {
-        font-family: Noto;
-        font-style: normal;
-        font-weight: 700;
-        src: url(/fonts/NotoSans-Bold.ttf) format("woff");
-    }
-
-    @font-face {
-        font-family: Noto;
-        font-style: italic;
-        font-weight: 700;
-        src: url(/fonts/NotoSans-BoldItalic.ttf) format("woff");
+    body {
+        @apply bg-white;
     }
 
     b, strong {
@@ -41,14 +21,6 @@
 
     p a {
         @apply text-blue-600 dark:text-blue-400 hover:underline;
-    }
-
-    h1, h2, h3, h4 {
-        @apply text-gray-600 dark:text-gray-300 tracking-wide;
-    }
-
-    p, figcaption, .article {
-        @apply text-gray-600 dark:text-gray-300;
     }
 
     .min-w-200 {

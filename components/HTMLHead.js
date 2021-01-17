@@ -20,6 +20,7 @@ export default function HTMLHead({ title }) {
         name="description"
         content="Riccardo Zaffalon, frontend web developer specialized in building fast and enjoyable web experiences, using modern web technologies and user-centered design"
       />
+      <link rel="stylesheet" href="https://use.typekit.net/yel0ajc.css" />
     </Head>
   );
 }
