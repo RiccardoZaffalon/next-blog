@@ -9,11 +9,9 @@ export default function Layout({ children, h1, title, tags, readingTime }) {
   return (
     <>
       <HTMLHead title={title} />
-      <div className="antialiased leading-relaxed min-h-screen flex flex-col">
+      <div className="text-gray-900 dark:text-gray-300 antialiased leading-relaxed min-h-screen flex flex-col">
         <Header title={title} className={container} />
-        <main
-          className={`${container} text-gray-900 dark:text-gray-300 mt-6 md:mt-12`}
-        >
+        <main className={`${container} mt-6 md:mt-12`}>
           <Title title={h1 || title} tags={tags} readingTime={readingTime} />
           {children}
         </main>
